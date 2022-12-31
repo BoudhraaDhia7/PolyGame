@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>PolyGames</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="{{ asset('assets_user/img/favicon.png') }}" rel="icon" />
+    <link href="{{ asset('assets_user/img/apple-touch-icon.png') }}" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('assets_user/vendor/aos/aos.css') }}" rel="stylesheet" />
+    <link
+      href="{{ asset('assets_user/vendor/bootstrap/css/bootstrap.min.css') }} "
+      rel="stylesheet"
+    />
+    <link
+      href="{{ asset('assets_user/vendor/bootstrap-icons/bootstrap-icons.css') }} "
+      rel="stylesheet"
+    />
+    <link href="{{ asset('assets_user/vendor/boxicons/css/boxicons.min.css') }} " rel="stylesheet" />
+    <link
+      href="{{ asset('assets_user/vendor/glightbox/css/glightbox.min.css') }} "
+      rel="stylesheet"
+    />
+    <link href="{{ asset('assets_user/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="{{ asset('assets_user/css/style.css') }} " rel="stylesheet" />
+
+  </head>
+
+  <body>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div class="d-flex flex-column">
+        <div class="profile mt-5">
+          <img src="{{ asset('assets_user/img/logo.png') }} " alt="" style="border: none;">
+          <h1 class="text-light"><a href="index.html">PolyGames</a></h1>
+         
+
+        <nav id="navbar" class="nav-menu navbar" style="margin-left: 45px;">
+          <ul>
+            <li>
+              <a href="#hero" class="nav-link scrollto active"
+                ><i class="bx bx-home"></i> <span>Accueil</span></a
+              >
+            </li>
+            <li>
+              <a href="#about" class="nav-link scrollto"
+                ><i class="bx bx-game"></i> <span>Jouer</span></a
+              >
+            </li>
+            
+          </ul>
+        </nav>
+        <!-- .nav-menu -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section
+      id="hero"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <div class="hero-container" data-aos="fade-in">
+    
+        <h1>PolyGames</h1>
+        <p>
+          Best
+          <span class="typed" data-typed-items="gaming web site !!"></span>
+        </p>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      {# <section id="about" class="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>Nos jeux</h2>
+            <p>
+              Voici les jeux qui pouvez-vous jouer sur notre site :
+            </p>
+          </div>
+          <div class="row d-flex">
+                {% for game in games %}
+                    
+                    <div class="row d-flex flex-rows pt-2">
+                    <div class="col-lg-8" data-aos="fade-right">
+                        <img src="/assets_user/img/bg_{{game.titre}}.png" class="img-fluid" alt="" />
+                    </div>
+                    <div class="col-lg-4  pt-lg-0 content"  data-aos="fade-left">
+                    <h3> <a href="/render/{{game.id}}" style="color:#173b6c"> {{game.titre}}</a></h3>
+                    </div>
+                    </div>  
+                {% endfor %}
+          
+          
+            </div>      
+          </div>
+        </div>
+      </section> #}
+       <form action="{{ path('app_login') }}" method="post">
+        <label for="username">Email:</label>
+        <input type="text" id="username" name="_username" value="{{ last_username }}"/>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="_password"/>
+
+        {# If you want to control the URL the user is redirected to on success
+        <input type="hidden" name="_target_path" value="/account"/> #}
+
+        <button type="submit">login</button>
+    </form>
+      <!-- End About Section -->
+
+      
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    
+    <!-- End  Footer -->
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ asset('assets_user/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('assets_user/vendor/aos/aos.js') }}"></script>
+    <script src="{{ asset('assets_user/vendor/bootstrap/js/bootstrap.bundle.min.js') }} "></script>
+    <script src="{{ asset('assets_user/vendor/glightbox/js/glightbox.min.js') }} "></script>
+    <script src="{{ asset('assets_user/vendor/isotope-layout/isotope.pkgd.min.js') }} "></script>
+    <script src="{{ asset('assets_user/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets_user/vendor/typed.js/typed.min.js') }} "></script>
+    <script src="{{ asset('assets_user/vendor/waypoints/noframework.waypoints.js') }}"></script>
+    <script src="{{ asset('assets_user/vendor/php-email-form/validate.js') }} "></script>
+    <!-- Template Main JS File -->
+    <script src="{{ asset('assets_user/js/main.js') }} "></script>
+  </body>
+</html>

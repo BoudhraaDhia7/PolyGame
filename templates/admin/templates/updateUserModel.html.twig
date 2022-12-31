@@ -1,0 +1,33 @@
+{% extends "admin/base.html.twig" %}
+{% block title %}Ajouter un nouveau joueur{% endblock %}
+{% block main %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+            <div class="pagetitle">
+            <h1>Ajouter un nouveau joueur</h1>
+            <nav>
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Ajouter</li>
+                </ol>
+            </nav>
+            </div><!-- End Page Title -->
+           
+            <h1>Register</h1>
+
+            {{ form_start(form) }}
+                {{ form_row(form.nom) }}
+                {{ form_row(form.born_at) }}
+                {{ form_row(form.editeur) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.plainPassword, {
+                    label: 'Password'
+                }) }}
+                {{ form_row(form.agreeTerms) }}
+
+                <button type="submit" class="btn btn-primary">Update</button>
+            {{ form_end(form) }}
+        
+           
+      
+     
+{% endblock %}

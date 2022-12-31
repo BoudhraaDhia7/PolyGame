@@ -1,0 +1,22 @@
+{% extends "admin/base.html.twig" %}
+{% block title %}Mise à ajour d'un joueur{% endblock %}
+{% block main %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+            <div class="pagetitle">
+            <h1>Mise à ajour d'un joueur</h1>
+            <nav>
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Update</li>
+                </ol>
+            </nav>
+            </div><!-- End Page Title -->
+           
+            <h1>Register</h1>
+
+              {{ form(form) }}
+        
+           
+      
+     
+{% endblock %}

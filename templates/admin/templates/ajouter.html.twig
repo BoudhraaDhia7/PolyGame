@@ -1,0 +1,20 @@
+{% extends "admin/base.html.twig" %}
+{% block title %}Ajouter un nouveau jeu{% endblock %}
+{% block main %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+            <div class="pagetitle">
+            <h1>Ajouter un nouveau jeu</h1>
+            <nav>
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Ajouter</li>
+                </ol>
+            </nav>
+            </div><!-- End Page Title -->
+           
+            {{ form(form) }}
+        
+           
+      
+     
+{% endblock %}
